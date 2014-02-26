@@ -366,8 +366,6 @@ abstract class ORM_Mptt extends ORM
         DB::query('unlock','UNLOCK TABLES')->execute($this->_db);
     }
 
-
-
     public function __get($column) {
         if ($column === 'parent')
             return $this->get_parent();
